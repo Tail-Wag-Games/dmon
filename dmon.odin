@@ -1,13 +1,13 @@
 package dmon
 
-when ODIN_OS == "windows" {
+when ODIN_OS == .Windows {
     when ODIN_DEBUG == true {
         foreign import dmon_lib "dmond.lib"
     }
     else {
         foreign import dmon_lib "dmon.lib"
     }
-} else when ODIN_OS == "darwin" {
+} else when ODIN_OS == .Darwin {
     foreign import dmon_lib "dmon.a"
 }
 
